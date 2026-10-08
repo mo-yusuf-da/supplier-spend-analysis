@@ -43,21 +43,5 @@ A procurement-style analysis of open government contract data: which suppliers h
 - Commodity codes use more than one scheme (goods codes, service codes, construction codes starting with 51). They are shown as coded, not relabeled.
 - Individuals' names are excluded from the renewal watchlist using a keyword rule, which can miss or wrongly exclude a few records.
 
-## Reproduce
-1. Download the national contracts CSV from the dataset page above (it is large and is not stored in this repo).
-2. Open `Supplier_Spend_Analysis.pbix`, then Home > Transform data. Point the `contracts` query at your downloaded file and adjust the parameters if you want a different scope.
-3. Close & Apply. To rebuild from scratch, use the code in `powerbi/`.
-
-## Repo layout
-| Path | Contents |
-| --- | --- |
-| `Supplier_Spend_Analysis.pbix` | The report (contains the filtered, cleaned data) |
-| `images/` | Dashboard screenshots |
-| `powerbi/fact_contracts.m` | Power Query for the cleaned fact table |
-| `powerbi/fnCleanVendor.m` | Vendor-name normalization function |
-| `powerbi/parameters.md` | Parameters and their values |
-| `powerbi/model.dax` | Calculated tables and columns |
-| `powerbi/measures.dax` | All measures |
-
 ## Attribution
 Contains information licensed under the Open Government Licence – Canada.
